@@ -9,7 +9,7 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget child = IntroContent(page: page)
+    Widget child = IntroContent(page: page);
     if (page.scrollable) {
       child = SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
