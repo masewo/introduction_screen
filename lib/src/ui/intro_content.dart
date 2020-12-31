@@ -24,12 +24,14 @@ class IntroContent extends StatelessWidget {
               page.decoration.titleTextStyle,
             ),
           ),
-          Padding(
-            padding: page.decoration.descriptionPadding,
-            child: _buildWidget(
-              page.bodyWidget,
-              page.body,
-              page.decoration.bodyTextStyle,
+          Expanded(
+            child: Padding(
+              padding: page.decoration.descriptionPadding,
+              child: _buildWidget(
+                page.bodyWidget,
+                page.body,
+                page.decoration.bodyTextStyle,
+              ),
             ),
           ),
           if (page.footer != null)
