@@ -109,6 +109,9 @@ class IntroductionScreen extends StatefulWidget {
   /// Color of done button
   final Color doneColor;
 
+  /// Padding of buttons
+  final EdgeInsetsGeometry buttonPadding;
+
   const IntroductionScreen(
       {Key key,
       @required this.pages,
@@ -135,7 +138,8 @@ class IntroductionScreen extends StatefulWidget {
       this.color,
       this.skipColor,
       this.nextColor,
-      this.doneColor})
+      this.doneColor,
+      this.buttonPadding})
       : assert(pages != null),
         assert(
           pages.length > 0,
@@ -213,6 +217,7 @@ class IntroductionScreenState extends State<IntroductionScreen> {
     final skipBtn = IntroButton(
       child: widget.skip,
       color: widget.skipColor ?? widget.color,
+      padding: widget.buttonPadding,
       onPressed: isSkipBtn ? _onSkip : null,
     );
 
