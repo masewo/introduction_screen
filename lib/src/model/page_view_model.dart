@@ -25,6 +25,8 @@ class PageViewModel {
   /// Contain all page customizations, like page color, text styles
   final PageDecoration decoration;
 
+  final bool scrollable;
+
   PageViewModel({
     this.title,
     this.titleWidget,
@@ -33,6 +35,7 @@ class PageViewModel {
     this.image,
     this.footer,
     this.decoration = const PageDecoration(),
+    this.scrollable = true,
   })  : assert(
           title != null || titleWidget != null,
           "You must provide either title (String) or titleWidget (Widget).",

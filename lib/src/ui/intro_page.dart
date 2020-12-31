@@ -9,6 +9,14 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget child = IntroContent(page: page)
+    if (page.scrollable) {
+      child = SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: child,
+      );
+    }
+
     return Container(
       color: page.decoration.pageColor,
       decoration: page.decoration.boxDecoration,
@@ -29,10 +37,7 @@ class IntroPage extends StatelessWidget {
               flex: page.decoration.bodyFlex,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 70.0),
-                child: SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  child: IntroContent(page: page),
-                ),
+                child: child,
               ),
             ),
           ],
