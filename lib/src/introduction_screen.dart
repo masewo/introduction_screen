@@ -110,7 +110,7 @@ class IntroductionScreen extends StatefulWidget {
   final Color? doneColor;
 
   /// Padding of buttons
-  final EdgeInsetsGeometry buttonPadding;
+  final EdgeInsetsGeometry? buttonPadding;
 
   const IntroductionScreen({
     Key? key,

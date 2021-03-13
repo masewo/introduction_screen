@@ -4,7 +4,7 @@ class IntroButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
   final Color? color;
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
 
   const IntroButton(
       {Key? key, this.onPressed, required this.child, this.color, this.padding})
