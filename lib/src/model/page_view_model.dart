@@ -25,7 +25,11 @@ class PageViewModel {
   /// Contain all page customizations, like page color, text styles
   final PageDecoration decoration;
 
-  final bool scrollable;
+  /// If widget Order is reverse - body before image
+  final bool reverse;
+
+  /// Wrap content in scrollView
+  final bool useScrollView;
 
   PageViewModel({
     this.title,
@@ -34,8 +38,9 @@ class PageViewModel {
     this.bodyWidget,
     this.image,
     this.footer,
+    this.reverse =  false,
     this.decoration = const PageDecoration(),
-    this.scrollable = true,
+    this.useScrollView = true,
   })  : assert(
           title != null || titleWidget != null,
           "You must provide either title (String) or titleWidget (Widget).",
