@@ -63,13 +63,6 @@ class _IntroPageState extends State<IntroPage>
   }
 
   Widget _buildFlex() {
-    Widget child = IntroContent(page: page);
-    if (page.scrollable) {
-      child = SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: child,
-      );
-    }
     return Container(
       color: widget.page.decoration.pageColor,
       decoration: widget.page.decoration.boxDecoration,

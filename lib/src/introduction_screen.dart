@@ -204,11 +204,9 @@ class IntroductionScreen extends StatefulWidget {
     this.buttonPadding,
   })  : assert(pages != null || rawPages != null),
         assert(
-          (pages != null && pages.length > 0) ||
-              (rawPages != null && rawPages.length > 0),
-  })  : assert(
-          pages.length > 0,
-          "You provide at least one page on introduction screen !",
+        (pages != null && pages.length > 0) ||
+            (rawPages != null && rawPages.length > 0),
+        "You provide at least one page on introduction screen !",
         ),
         assert(!showDoneButton || (done != null && onDone != null)),
         assert((showSkipButton && skip != null) || !showSkipButton),
